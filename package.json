@@ -1,7 +1,28 @@
 {
   "name": "md-links",
   "version": "0.1.0",
+  "description": "Terminal string get links in markdown files to get info",
+  "author": "Karina Macedo",
+  "main": "index.js",
   "engines": {
     "node": ">=14.x"
+  },
+  "type": "module",
+  "dependencies": {
+    "@babel/preset-env": "^7.17.10",
+    "file-system": "^2.2.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "babel-jest": "^28.1.0",
+    "jest": "^28.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
   }
 }
