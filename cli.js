@@ -19,7 +19,7 @@ if (arg.length === 2) {
 }
 
 if (arg.length === 3 && argRoute === '--help') {
-  console.log(`\n${cYellow('These are the options:')}\n${cGreen('--validate:')}You will be able to see if your links are broken or good and get the status of http \n${cGreen('--stats:')}You can see total and unique links \n${cGreen('--stats --validate:')}You can see total, unique and broken links`);
+  console.log(`\n${cYellow('These are the options:')}\n${cGreen('--validate: ')}You will be able to see if your links are broken or good and get the status of http \n${cGreen('--stats: ')}You can see total and unique links \n${cGreen('--stats --validate: ')}You can see total, unique and broken links`);
 } else {
   if (arg.length === 3 && !argValidate) {
     mdLinks(argRoute, false)
