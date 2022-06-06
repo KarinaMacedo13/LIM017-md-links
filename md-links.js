@@ -45,11 +45,6 @@ export const getArrayMD = (route) => {
   return arrayPathsMD;
 };
 
-// const arrayPrueba = convertRelativeToAbsolutePath('PruebaMD/Carpeta 2');
-// console.log(arrayPrueba);
-// const Prueba2 = getArrayMD(arrayPrueba)
-// console.log(Prueba2);
-
 // Declaraciones de las expresiones regulares
 const expRegular = {
   getMDLinks: new RegExp(/\[(.*)\]\([(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)\)/mg),
@@ -78,9 +73,6 @@ export const obtainLinks = (arrayMDFunction) => {
   });
   return arrayMdLinksTextFile;
 };
-
-// const Prueba3 = obtainLinks(Prueba2);
-// console.log(Prueba3);
 
 // Función que obtiene un array de links de los distintos archivos .md con validación HTTP
 export const getHTTPRequest = (link) => {

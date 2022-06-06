@@ -38,14 +38,6 @@ const arrayResult = [
   },
 ];
 
-// const arrayResultCatch = [
-//   {
-//     file: 'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\roto.md',
-//     href: 'htps://www.manualweb.net/java/tipos-datos-primitivos/',
-//     text: 'roto',
-//   },
-// ];
-
 describe('getpathExist', () => {
   it('deberia existir la ruta', () => {
     expect(getPathExist(routeRelative)).toBe(true);
@@ -118,25 +110,11 @@ describe('getHTTPRequest', () => {
       text: 'Array - MDN',
     },
   ];
-  // const arrayResultCatchHTTP = [
-  //   {
-  //     file: 'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\roto.md',
-  //     href: 'htps://www.manualweb.net/java/tipos-datos-primitiv',
-  //     text: 'roto',
-  //     ok: 'FAIL',
-  //     status: 'Error',
-  //   },
-  // ];
+
   it('deberia resolver un array con links de los distintos archivos con sus caracteristicas {href, text, file, status, ok}', (done) => {
     getHTTPRequest(arrayResult).then((response) => {
       expect(response).toEqual(arrayResultHTTP);
       done();
     });
   });
-  // it('deberia resolver un array con links de los distintos archivos con sus caracteristicas {href, text, file, status, ok} cuando esta roto', (done) => {
-  //   getHTTPRequest(arrayResultCatch).catch((err) => {
-  //     expect(err).toEqual(arrayResultCatchHTTP);
-  //     done();
-  //   });
-  // });
 });
