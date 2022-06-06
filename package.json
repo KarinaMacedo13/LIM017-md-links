@@ -1,5 +1,5 @@
 {
-  "name": "md-links",
+  "name": "md-Links-Karina-Macedo",
   "version": "0.1.0",
   "description": "Terminal string get links in markdown files to get info",
   "author": "Karina Macedo",
@@ -8,7 +8,7 @@
     "node": ">=14.x"
   },
   "type": "module",
-  "bin" : {
+  "bin": {
     "mdLinks": "cli.js"
   },
   "dependencies": {
@@ -28,7 +28,8 @@
     "eslint": "^8.15.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "jest": "^28.1.0"
+    "jest": "^28.1.0",
+    "jest-fetch-mock": "^3.0.3"
   },
   "scripts": {
     "eslint": "eslint --ext .js test/",
