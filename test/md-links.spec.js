@@ -4,6 +4,7 @@ import {
   getPathAbsolute,
   getArrayMD,
   obtainLinks,
+  getHTTPRequest,
 } from '../md-links.js';
 
 jest.mock('../libraries.js');
@@ -15,9 +16,35 @@ const routeDirectory = 'C:/Users/Laboratoria/Documents/GitHub/LIM017-md-links/Pr
 const routenotMD = 'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta1';
 const arrayTest = [
   'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\prueba.md',
+  'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\roto.md',
   'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\1Links.md',
   'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\0links.md',
 ];
+const arrayResult = [
+  {
+    file: 'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\1Links.md',
+    href: 'https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort',
+    text: 'Array.prototype.sort() - MDN',
+  },
+  {
+    file: 'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\1Links.md',
+    href: 'https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic',
+    text: 'Funciones clásicas',
+  },
+  {
+    file: 'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\1Links.md',
+    href: 'https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/',
+    text: 'Array - MDN',
+  },
+];
+
+// const arrayResultCatch = [
+//   {
+//     file: 'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\roto.md',
+//     href: 'htps://www.manualweb.net/java/tipos-datos-primitivos/',
+//     text: 'roto',
+//   },
+// ];
 
 describe('getpathExist', () => {
   it('deberia existir la ruta', () => {
@@ -56,18 +83,6 @@ describe('obtainLinks', () => {
   const arrayMD = [
     'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\1Links.md',
   ];
-  const arrayResult = [
-    {
-      href: 'https://www.manualweb.net/java/tipos-datos-primitivos/',
-      text: 'error404',
-      file: 'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\1Links.md',
-    },
-    {
-      href: 'https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/',
-      text: 'Array - MDN',
-      file: 'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\1Links.md',
-    },
-  ];
   it('deberia resolver un array con links de los distintos archivos con sus caracteristicas {href, text, file}', () => {
     expect(obtainLinks(arrayMD)).toStrictEqual(arrayResult);
   });
@@ -77,4 +92,51 @@ describe('obtainLinks', () => {
   it('deberia resolver que no hay links', () => {
     expect(obtainLinks(notLinks)).toStrictEqual([]);
   });
+});
+
+describe('getHTTPRequest', () => {
+  const arrayResultHTTP = [
+    {
+      file: 'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\1Links.md',
+      href: 'https://developer.mozilla.org/es/docs/Web/JavaScri',
+      ok: 'OK',
+      status: 200,
+      text: 'Array.prototype.sort() - MDN',
+    },
+    {
+      file: 'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\1Links.md',
+      href: 'https://curriculum.laboratoria.la/es/topics/javasc',
+      ok: 'OK',
+      status: 200,
+      text: 'Funciones clásicas',
+    },
+    {
+      file: 'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\1Links.md',
+      href: 'https://developer.mozilla.org/es/docs/Web/JavaScri',
+      ok: 'OK',
+      status: 200,
+      text: 'Array - MDN',
+    },
+  ];
+  // const arrayResultCatchHTTP = [
+  //   {
+  //     file: 'C:\\Users\\Laboratoria\\Documents\\GitHub\\LIM017-md-links\\PruebaMD\\Carpeta2\\roto.md',
+  //     href: 'htps://www.manualweb.net/java/tipos-datos-primitiv',
+  //     text: 'roto',
+  //     ok: 'FAIL',
+  //     status: 'Error',
+  //   },
+  // ];
+  it('deberia resolver un array con links de los distintos archivos con sus caracteristicas {href, text, file, status, ok}', (done) => {
+    getHTTPRequest(arrayResult).then((response) => {
+      expect(response).toEqual(arrayResultHTTP);
+      done();
+    });
+  });
+  // it('deberia resolver un array con links de los distintos archivos con sus caracteristicas {href, text, file, status, ok} cuando esta roto', (done) => {
+  //   getHTTPRequest(arrayResultCatch).catch((err) => {
+  //     expect(err).toEqual(arrayResultCatchHTTP);
+  //     done();
+  //   });
+  // });
 });

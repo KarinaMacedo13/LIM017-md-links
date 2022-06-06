@@ -15,12 +15,15 @@ const cRed = chalk.red;
 
 console.log(chalk.white.bgMagenta('Welcome MDLinks'));
 if (arg.length === 2) {
-  console.log('Enter the command <mdLinks --help> for more information');
+  console.log('Enter the command <mdLinks --help> for more information 🤡');
 }
 
 if (arg.length === 3 && argRoute === '--help') {
   console.log(`\n${cYellow('These are the options:')}\n${cGreen('--validate: ')}You will be able to see if your links are broken or good and get the status of http \n${cGreen('--stats: ')}You can see total and unique links \n${cGreen('--stats --validate: ')}You can see total, unique and broken links`);
 } else {
+  if(!argValidate || !argStats) {
+    console.log(chalk.bgRed(chalk.white('Invalid command. Enter the command <mdLinks --help> for more information 🤡')));
+  }
   if (arg.length === 3 && !argValidate) {
     mdLinks(argRoute, false)
       .then((response) => response.forEach((e) => console.log(`\n${cRed('Reference: ')}${cGreen(e.href)}\n${cBlue('Text: ')}${cGreen(e.text)}\n${cMagenta('File: ')}${cGreen(e.file)}`)))
