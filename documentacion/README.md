@@ -26,7 +26,7 @@ Las **[options]** en este programa son:
 ## 3. Diagrama de flujo
 Para el desarrollo del siguiente programa se baso del siguiente diagrama de flujo:
 
-[![MDLINKS-DIAGRAMA-DE-FLUJO.png](https://i.postimg.cc/h45hq0gk/MDLINKS-DIAGRAMA-DE-FLUJO.png)](https://postimg.cc/PN1dWYCy)
+[![MDLINKS-DIAGRAMA-DE-FLUJO.png](https://i.postimg.cc/Wbd82SZg/MDLINKS-DIAGRAMA-DE-FLUJO.png)](https://postimg.cc/LnMLDtN8)
 
 ## 4. Autor
 [Karina Macedo](https://github.com/KarinaMacedo13)
