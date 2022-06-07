@@ -70,6 +70,6 @@ Obtendrá los datos de la siguiente manera:
 ## 4. Documentación del Proyecto
 La documentación de la realización de este proyectos se encuentra en el siguiente apartado:
 
-[Documentación del Proyecto](documentacion\README.md)
+[Documentación del Proyecto](https://github.com/KarinaMacedo13/LIM017-md-links/blob/55a109fe593e59c7eadb9316b65dc6b0b5d824b1/documentacion/README.md)
 ## 5. Autor
 [Karina Macedo](https://github.com/KarinaMacedo13)
