@@ -14,7 +14,7 @@ Programa desarrollado en node.js que busca links de archivos.md. y permite la va
 
 ## 2. Instalación
 Instale la librería con el siguiente comando:
-`npm i md-Links-karina-macedo`
+`npm i md-links-karina-macedo`
 ## 3. Instrucciones de Uso
 `mdLinks <filepath> [options]`
 - filepath: Es la ruta del archivo a ejecutar en el programa.
