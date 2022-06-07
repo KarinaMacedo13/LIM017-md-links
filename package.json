@@ -21,6 +21,10 @@
   "bin": {
     "mdLinks": "cli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KarinaMacedo13/LIM017-md-links"
+  },
   "dependencies": {
     "@babel/preset-env": "^7.17.12",
     "chalk": "^5.0.1",
