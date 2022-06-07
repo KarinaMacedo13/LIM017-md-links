@@ -28,11 +28,13 @@ Los comandos a ejecutar son los siguientes:
 
 :tw-2b50: `mdLinks --help`
 Obtendrá los comando relacionados al programa:
+
 [![1.jpg](https://i.postimg.cc/rFvwbFcx/1.jpg)](https://postimg.cc/GHxRTR4m)
 
 :tw-2b50: `mdLinks filepath`
 
 [![2.jpg](https://i.postimg.cc/28CsSswM/2.jpg)](https://postimg.cc/jCkg8kB4)
+
 Obtendrá los datos de la siguiente manera:
 - href: URL encontrada.
 - text: Texto que aparece dentro del link.
@@ -58,6 +60,7 @@ Obtendrá los datos de la siguiente manera:
 - unique: Cantidad de links unicos en la ruta
 
 :tw-2b50:`mdLinks filepath --stats --validate`
+
 [![4.jpg](https://i.postimg.cc/Gpj3HFDx/4.jpg)](https://postimg.cc/Y4hBPmbv)
 
 - total: Cantidad de links en la ruta
@@ -67,6 +70,6 @@ Obtendrá los datos de la siguiente manera:
 ## 4. Documentación del Proyecto
 La documentación de la realización de este proyectos se encuentra en el siguiente apartado:
 
-[Documentación del Proyecto](Documentación\README.md)
+[Documentación del Proyecto](documentacion\README.md)
 ## 5. Autor
 [Karina Macedo](https://github.com/KarinaMacedo13)
