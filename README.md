@@ -26,12 +26,12 @@ Las **[options]** en este programa son:
 
 Los comandos a ejecutar son los siguientes:
 
-:tw-2b50: `mdLinks --help`
+`mdLinks --help`
 Obtendrá los comando relacionados al programa:
 
 [![1.jpg](https://i.postimg.cc/rFvwbFcx/1.jpg)](https://postimg.cc/GHxRTR4m)
 
-:tw-2b50: `mdLinks filepath`
+`mdLinks filepath`
 
 [![2.jpg](https://i.postimg.cc/28CsSswM/2.jpg)](https://postimg.cc/jCkg8kB4)
 
@@ -40,7 +40,7 @@ Obtendrá los datos de la siguiente manera:
 - text: Texto que aparece dentro del link.
 - file: Ruta del archivo donde se encontró el link.
 
-:tw-2b50: `mdLinks filepath --validate`
+`mdLinks filepath --validate`
 
 [![5.jpg](https://i.postimg.cc/xdL5HCjR/5.jpg)](https://postimg.cc/8FPLgT6J)
 
@@ -51,7 +51,7 @@ Obtendrá los datos de la siguiente manera:
 - status: Código de respuesta HTTP.
 - ok: Mensaje fail en caso de fallo u ok en caso de éxito.
 
-:tw-2b50: `mdLinks filepath --stats`
+`mdLinks filepath --stats`
 
 [![3.jpg](https://i.postimg.cc/NjmjwqfV/3.jpg)](https://postimg.cc/rDykSH4C)
 
@@ -59,7 +59,7 @@ Obtendrá los datos de la siguiente manera:
 - total: Cantidad de links en la ruta
 - unique: Cantidad de links unicos en la ruta
 
-:tw-2b50:`mdLinks filepath --stats --validate`
+`mdLinks filepath --stats --validate`
 
 [![4.jpg](https://i.postimg.cc/Gpj3HFDx/4.jpg)](https://postimg.cc/Y4hBPmbv)
 
